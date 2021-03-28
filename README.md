@@ -2,7 +2,7 @@
 
 Make run.sh an executable to run the code.
 
-##./run.sh will:  
+## ./run.sh will:  
 
 1) Take input points from input.txt (least_sq_new.cpp)
 
@@ -14,7 +14,7 @@ Make run.sh an executable to run the code.
 
 5) Plot the points and segments (plotter.py)
 
-##Input Format
+## Input Format
 
 N C
 
@@ -28,7 +28,7 @@ xn yn
 
 Where N is the number of points, C is the cost of one segment and the coordinates of the ith point are [xi,yi]
 
-##Output Format
+## Output Format
 
 0 0 0 0 0
 
