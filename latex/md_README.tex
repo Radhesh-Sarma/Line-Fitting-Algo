@@ -1,0 +1,39 @@
+Make run.\+sh an executable to run the code.
+
+\doxysection*{./run.sh will\+:}
+
+1) Take input points from input.\+txt (least\+\_\+sq\+\_\+new.\+cpp)
+
+2) Sort the points w.\+r.\+t. increasing x, if x coordinates of two points are the same, then sort with increasing y (least\+\_\+sq\+\_\+new.\+cpp)
+
+3) Compute the segments of best fit (least\+\_\+sq\+\_\+new.\+cpp)
+
+4) Store the information of segments in output.\+txt (least\+\_\+sq\+\_\+new.\+cpp)
+
+5) Plot the points and segments (plotter.\+py)
+
+\doxysection*{Input Format}
+
+N C
+
+x1 y1
+
+x2 y2
+
+..
+
+xn yn
+
+Where N is the number of points, C is the cost of one segment and the coordinates of the ith point are \mbox{[}xi,yi\mbox{]}
+
+\doxysection*{Output Format}
+
+0 0 0 0 0
+
+j i cost a b
+
+..
+
+(one line for each segment)
+
+For each segment, i is the left-\/most point included in fitting, j is the right-\/most point included in fitting. Total cost incurred by a segment is given by cost. Slope of line is a, intercept is b. 
