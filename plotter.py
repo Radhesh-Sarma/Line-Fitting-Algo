@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 
 fin = np.loadtxt("sorted_input.txt")
 fout = np.loadtxt("output.txt")
+cinp = np.loadtxt("input.txt")
 
 plt.scatter(fin[:,0],fin[:,1])
 
@@ -19,12 +20,12 @@ for i in fout:
 		ly = i[3]*lx+i[4]
 	plt.plot(lx,ly, color="lime")
 
-for i in range(len(fout)-1):
-	if(i==0):
-		continue
-	plt.plot([fin[int(fout[i][1])-1][0],fin[int(fout[i+1][0])-1][0]],[fin[int(fout[i][1])-1][1],fin[int(fout[i+1][0])-1][1]],color="red",linestyle="--")
+#for i in range(len(fout)-1):
+#	if(i==0):
+#		continue
+#	plt.plot([fin[int(fout[i][1])-1][0],fin[int(fout[i+1][0])-1][0]],[fin[int(fout[i][1])-1][1],fin[int(fout[i+1][0])-1][1]],color="red",linestyle="--")
 
-plt.title('Total cost = '+str(fout[1][2]), loc="center")
+plt.title('C = '+str(cinp[0][1])+'   Total cost = '+str(fout[1][2]), loc="center")
 
 plt.savefig("currplot")
 plt.show()

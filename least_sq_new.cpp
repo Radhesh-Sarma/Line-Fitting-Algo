@@ -100,7 +100,7 @@ void findSegment(float *m, float *im, float *errors, int j){
 	}
 	float a, b;
 	getCoeffs(mini-1,j-1,&a,&b);
-	cout<<j<<" "<<mini<<" "<<mincost<<" "<<a<<" "<<b<<"\n";
+//	cout<<j<<" "<<mini<<" "<<mincost<<" "<<a<<" "<<b<<"\n";
 	ofstream fout;
 	fout.open("output.txt",ios::app);
 	fout<<j<<" "<<mini<<" "<<mincost<<" "<<a<<" "<<b<<"\n";
@@ -138,10 +138,10 @@ int main(){
 	fin>>n>>c;
 	x = new float[n];
 	y = new float[n];
-	cout<<"\nInput:\n";
+	cout<<"\nInput Taken\n";
 	for(int i=0; i<n; i++){
 		fin>>x[i]>>y[i];
-		cout<<x[i]<<" "<<y[i]<<"\n";
+//		cout<<x[i]<<" "<<y[i]<<"\n";
 	}	
 	fin.close();	
 	
@@ -154,11 +154,11 @@ int main(){
 		}		
 	
 	fout.open("sorted_input.txt");
-	cout<<"\nSorted Input:\n";
+	cout<<"\nInput Sorted\n";
 	for(int i=0; i<n; i++){
 		fin>>x[i]>>y[i];
 		fout<<x[i]<<" "<<y[i]<<"\n";
-		cout<<x[i]<<" "<<y[i]<<"\n";
+//		cout<<x[i]<<" "<<y[i]<<"\n";
 	}
 	fout.close();
 	
@@ -171,20 +171,21 @@ int main(){
 			errors[i][j] = 0;
 	}
 	
-	cout<<"\nOutput:\n";
+	cout<<"\nCreating Segments\n";
 	createCostArray(m,im,(float *)errors);
 	findSegment(m,im,(float *)errors,n);
 	
-	cout<<"\nM:\n";
-	for(int i=0; i<n+1; i++)
-		cout<<m[i]<<" ";
+//	cout<<"\nM:\n";
+//	for(int i=0; i<n+1; i++)
+//		cout<<m[i]<<" ";
 			
-	cout<<"\nError Matrix:\n";
-	for(int i=0; i<n+1; i++){
-		for(int j=0; j<n+1; j++)
-			cout<<errors[i][j]<<" ";
-		cout<<"\n";	
-	}	
+//	cout<<"\nError Matrix:\n";
+//	for(int i=0; i<n+1; i++){
+//		for(int j=0; j<n+1; j++)
+//			cout<<errors[i][j]<<" ";
+//		cout<<"\n";	
+//	}
+	cout<<"\nRun Complete\n";	
 	
 	delete[] x;
 	delete[] y;
